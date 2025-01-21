@@ -18,15 +18,18 @@
     <h1 style="color: black; text-align: center;">Question&Answer Platform</h1>
 
     <div class="col-md-6 mx-auto">
-        <form action="">
+        <form action="quiz\home\templates\quiz.html">
             <div class="form-group">
-                <label for="">Select Types</label>
+                <label for="">Type Your Question</label>
                 <select name="gfg" id="" class="form-control" value="gfg">
-                    <option value="Choose">Choose</option>
+                    <option value="Choose"></option>
                     {% for type in catgories %}
                     <option value="{{type.gfg_name}}">{{type.gfg_name}}</option>
                     {% endfor %}
-                </select>
+            </select>
+            <input class="form-control mt-3 form-control-lg" 
+           type="text" 
+           placeholder="Enter...">
             </div>
             <button class="btn btn-danger mt-3">Submit</button>
         </form>
